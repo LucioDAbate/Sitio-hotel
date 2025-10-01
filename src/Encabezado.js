@@ -3,6 +3,7 @@ import {AppBar,InputBase,Toolbar,Box,Button} from '@mui/material';
 import {useState} from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '@mui/material/Avatar';
+import NavTabs from './NavTabs';
 
 
 
@@ -10,8 +11,8 @@ const Encabezado =()=>{
     const  [mobile, setMobile] = useState(false);
     const displayMobile  =()=>{
         return(
-            <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center"}} >
-                <img src="/mantecademar.png" alt="Logo" style={{ height: "50px" }} />
+            <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor: "#1c1c1c", paddingY: 2}} >
+                <img src="/logoinca.png" alt="Logo" style={{ height: "130px" }} />
                 <Box
           sx={{
             display: "flex",
@@ -36,8 +37,10 @@ const Encabezado =()=>{
 
     const displayDesktop =()=>{
         return(
-        <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
-            <img src="/mantecademar.png" alt="Logo" style={{ height: "50px" }} />     
+          <>
+        
+        <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center", backgroundColor: "#1c1c1c", paddingY: 2}}>
+            <img src="/logoinca.png" alt="Logo" style={{ height: "130px"  }} />     
 
                    <Box
           sx={{
@@ -58,20 +61,27 @@ const Encabezado =()=>{
             <Button
               variant="contained"
               color="secondary"
-              sx={{ marginLeft: 2 }}
+              sx={{ marginLeft: 2, width:120,height: 60 }}
             >
               Registrarme
             </Button>
             <Avatar 
                 alt="User Avatar" 
-                src="/user.png"   // podés poner una imagen en public/, ej: public/user.png
-                sx={{ marginLeft: 2 }}
+                src="/user.png"  
+                sx={{ marginLeft: 2, width:56, height:56 }}
             />
 
         </Toolbar>
+        </>
         );
     }
-    return <AppBar position='fixed'>{mobile ? displayMobile() : displayDesktop()}</AppBar>;
+    return (
+      <>
+      <AppBar position='fixed' sx={{backgroundColor:  "#1c1c1c"}} >{mobile ? displayMobile() : displayDesktop()}</AppBar>
+      <Toolbar/>
+      <NavTabs/>
+      </>
+      )
 }
 
 

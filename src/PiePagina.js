@@ -1,7 +1,9 @@
 import { Box, Typography, Link, Grid } from "@mui/material";
 
+
 function PiePagina() {
   return (
+    <>
     <Box
       sx={{
         backgroundColor: "#2c3e50",
@@ -14,7 +16,7 @@ function PiePagina() {
         {/* Columna 1: Logo / Descripción */}
         <Grid item xs={12} md={3}>
           <Typography variant="h6" gutterBottom>
-            Hotel Inca del Sol ☀️
+            Hotel Sol del Inca ☀️
           </Typography>
           <Typography variant="body2">
             El lugar ideal para descansar y disfrutar de una experiencia
@@ -68,10 +70,11 @@ function PiePagina() {
       {/* Línea inferior */}
       <Box sx={{ textAlign: "center", marginTop: "30px", borderTop: "1px solid gray", paddingTop: "20px" }}>
         <Typography variant="body2">
-          © 2025 Hotel Inca del Sol. Todos los derechos reservados (ficticio).
+          © 2025 Hotel Sol del Inca. Todos los derechos reservados (ficticio).
         </Typography>
       </Box>
     </Box>
+    </>
   );
 }
 

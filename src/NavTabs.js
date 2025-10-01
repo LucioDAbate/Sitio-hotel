@@ -12,7 +12,7 @@ function NavTabs() {
         textColor="inherit"
         indicatorColor="secondary"
       >
-        <Tab label="Información general" value="/" component={Link} to="/" />
+        <Tab label="Home" value="/" component={Link} to="/" />
         <Tab label="Habitaciones" value="/habitaciones" component={Link} to="/habitaciones" />
         <Tab label="Ubicación" value="/ubicacion" component={Link} to="/ubicacion" />
         <Tab label="Contacto" value="/contacto" component={Link} to="/contacto" />
